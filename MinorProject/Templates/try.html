@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% block body %}
+<!-- try.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined View</title>
+    <link rel="stylesheet" type="text/css" href="/Static/style.css" /> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body style="background: #343a40;">
+    <!-- style="background-color: #343a40;" -->
+    
+
+        <h1>Analysis</h1>
+        
+        <!-- <p>Mean Quantity: {{ result_mean_qty }}</p>
+        
+        <p>Top Customer: {% if result_top_customer %}
+            {{ result_top_customer.customer_name }} (ID: {{ result_top_customer.customer_id }}) with total quantity {{ result_top_customer.total_quantity }}
+            {% else %}
+            No top customer found.
+            {% endif %}</p> -->
+
+
+
+
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Mean Quantity</h5>
+                        <p class="card-text">Mean Quantity: {{ result_mean_qty }}</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Top product</h5>
+                        <p class="card-text">Top product: {{ top_product }}</p>
+                    </div>
+                </div>
+        
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Top Customer</h5>
+                        {% if result_top_customer %}
+                            <p class="card-text">
+                                {{ result_top_customer.customer_name }} (ID: {{ result_top_customer.customer_id }}) with total quantity {{ result_top_customer.total_quantity }}
+                            </p>
+                        {% else %}
+                            <p class="card-text">No top customer found.</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class = chart-image>
+                <img src="Static\images\city_quantity_chart.png" alt="State vs Quantity Chart">
+                <img src="Static\images\date_quantity_chart.png" alt="State vs Quantity Chart">
+                <img src="Static\images\state_quantity_chart.png" alt="State vs Quantity Chart">
+                <!-- <img src="Static\images\product_quantity_pie_chart.png" alt="State vs Quantity Chart"> -->
+            </div>
+            <div class = chart-image>
+                <!-- <img src="Static\images\city_quantity_chart.png" alt="State vs Quantity Chart"> -->
+                <!-- <img src="Static\images\state_quantity_chart.png" alt="State vs Quantity Chart"> -->
+                <!-- <img src="Static\images\date_quantity_chart.png" alt="State vs Quantity Chart"> -->
+                <img src="Static\images\product_quantity_pie_chart.png" alt="State vs Quantity Chart">
+            </div>
+            
+            
+        </body>
+        
+        </html>
+        {% endblock body %}
