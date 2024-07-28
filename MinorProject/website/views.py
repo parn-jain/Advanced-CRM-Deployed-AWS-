@@ -23,16 +23,16 @@ def index(request):
             return redirect('home')
     else:
         context = {'variable': 'this was a variable'}
-        return render(request, "index.html", context)
+        return render(request, "Templates/index.html", context)
 
 def about(request):
-    return render(request, "about.html")
+    return render(request, "Templates/about.html")
 
 def contactus(request):
-    return render(request, "contact.html")
+    return render(request, "Templates/contact.html")
 
 def services(request):
-    return render(request, "services.html")
+    return render(request, "Templates/services.html")
 
 def logout_user(request):
     logout(request)
