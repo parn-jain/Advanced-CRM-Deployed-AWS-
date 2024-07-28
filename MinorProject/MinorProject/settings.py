@@ -82,13 +82,23 @@ WSGI_APPLICATION = 'MinorProject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'MinorProjectDB',
+#         'USER': 'root',
+#         'PASSWORD': 'Pj@123456',
+#         'HOST':'127.0.0.1',
+#         'PORT':'3306'
+#     }
+# }
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'MinorProjectDB',
-        'USER': 'root',
-        'PASSWORD': 'Pj@123456',
-        'HOST':'127.0.0.1',
+        'NAME': 'minorprojectdb',
+        'USER': 'admin',
+        'PASSWORD': 'Hello7697283492',
+        'HOST':'crm-database.cdays8ewiw5f.ap-southeast-2.rds.amazonaws.com',
         'PORT':'3306'
     }
 }
